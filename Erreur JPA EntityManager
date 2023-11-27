@@ -1,0 +1,5 @@
+Pour résoudre le problème suivant :
+ERROR : Could not open JPA EntityManager for transaction; nested exception is org.hibernate.exception.JDBCConnectionException: Unable to acquire JDBC Connection
+il faut ajouter :
+import org.springframework.transaction.annotation.Transactional;
+@Transactional  dans la classe où on a les méthodes de mise à jour et de suppression et ajout dans la base de données 
